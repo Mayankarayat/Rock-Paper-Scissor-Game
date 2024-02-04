@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock paper scissor</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <div class="display">
+        <div class="user"></div>
+        <div class="computer"></div>
+    </div>
+
+    <div class="winner">
+        <h1></h1>
+    </div>
+
+
+    <div class="container">
+
+        <div class="main">
+            <div class="rock">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRwNEac28TRVSE2WXe-bR9LbK6vUg5RWas6w&usqp=CAU"
+                    alt="">
+                <a href="#">Rock</a>
+            </div>
+            <div class="paper">
+                <img src="https://www.vhv.rs/dpng/d/165-1650091_transparent-rock-paper-scissors-png-rock-paper-scissors.png"
+                    alt="">
+                <a href="#">PAPER</a>
+            </div>
+            <div class="scissor">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR29KZwnUpVaYl24zwCqOmy172OsxngwcB0vA&usqp=CAU"
+                    alt="">
+                <a href="#">SCISSOR</a>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        const rock = document.querySelector(".rock");
+        const paper = document.querySelector(".paper");
+        const scissor = document.querySelector(".scissor");
+        const computer = document.querySelector(".computer");
+        const user = document.querySelector(".user")
+        const winner = document.getElementsByTagName('h1')[0];
+        const main = document.querySelector(".main")
+        console.log(winner);
+
+        function win(a, b) {
+
+            let award;
+            if (a == b) {
+                winner.innerHTML = "DRAW"
+            }
+            else if (a == 'rock' && b == 'scissor') {
+                winner.innerHTML = "USER WIN!!"
+            }
+            else if (a == 'rock' && b == 'paper') {
+                winner.innerHTML = "COMPUTER WIN!!";
+
+            }
+            else if (a == 'paper' && b == 'rock') {
+                winner.innerHTML = "USER WIN!!";
+
+            }
+            else if (a == 'paper' && b == 'scissor') {
+                winner.innerHTML = "COMPUTER WIN!!";
+
+            }
+            else if (a == 'scissor' && b == 'rock') {
+                winner.innerHTML = "COMPUTER WIN!!";
+
+            }
+            else if (a == 'scissor' && b == 'paper') {
+                winner.innerHTML = "USER WIN!!";
+
+            }
+
+        }
+
+        rock.addEventListener('click', () => {
+            user.innerHTML = `<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRwNEac28TRVSE2WXe-bR9LbK6vUg5RWas6w&usqp=CAU" alt="">
+            <a href="#">rock</a>`
+        })
+        paper.addEventListener('click', () => {
+            user.innerHTML = `<img src="https://www.vhv.rs/dpng/d/165-1650091_transparent-rock-paper-scissors-png-rock-paper-scissors.png" alt="">
+            <a href="#">paper</a>`
+        })
+        scissor.addEventListener('click', () => {
+            user.innerHTML = `<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR29KZwnUpVaYl24zwCqOmy172OsxngwcB0vA&usqp=CAU" alt="">
+            <a href="#">scissor</a>`
+        })
+
+
+        main.addEventListener('click', () => {
+            var rand = Math.floor(Math.random() * 3)
+            console.log(rand)
+                if (rand == 0) {
+                    computer.innerHTML = `<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSRwNEac28TRVSE2WXe-bR9LbK6vUg5RWas6w&usqp=CAU" alt="">
+                    <a href="#">rock</a>`;
+                    computer.style.transform = "scale(1)"
+                    check = 1;
+                }
+                else if (rand == 1) {
+                    computer.innerHTML = `<img src="https://www.vhv.rs/dpng/d/165-1650091_transparent-rock-paper-scissors-png-rock-paper-scissors.png" alt="">
+                        <a href="#">paper</a>`;
+                        computer.style.transform = "scale(1)"
+                        check = 1;
+                }
+                else if (rand == 2) {
+                    computer.innerHTML = `<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR29KZwnUpVaYl24zwCqOmy172OsxngwcB0vA&usqp=CAU" alt="">
+                        <a href="#">scissor</a>`;
+                        computer.style.transform = "scale(1)"
+                        check = 1;
+                }
+
+            let a = document.querySelector('.user').getElementsByTagName('a')[0].innerHTML
+            let b = document.querySelector('.computer').getElementsByTagName('a')[0].innerHTML
+             win(a, b);
+
+
+        })
+
+    </script>
+</body>
+
+</html>

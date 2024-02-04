@@ -1,0 +1,149 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    min-height: 100vh;
+    min-width: 100%;
+    /* display: flex;
+    justify-content: center;
+    align-items: flex-end; */
+    /* background: linear-gradient(rgba(23,34,45,0.5),rgba(23,34,45,0.5)); */
+}
+
+.display{
+    width: 60%;
+    height: 50vh;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all .5s ease;
+}
+
+.container{
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+
+}
+
+
+.main{
+    height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 100px;
+}
+
+.rock{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.rock a{
+    font-size: 50px;
+    text-decoration: none;
+    color: black;
+}
+
+.rock img{
+    width: 200px;
+    aspect-ratio: 4/5;
+}
+
+.paper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.paper a{
+    font-size: 50px;
+    text-decoration: none;
+    color: black;
+}
+
+.paper img{
+    width: 200px;
+    aspect-ratio: 4/5;
+}
+
+.scissor{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.scissor a{
+    font-size: 50px;
+    text-decoration: none;
+    color: black;
+}
+
+.scissor img{
+    width: 200px;
+    aspect-ratio: 4/5;
+}
+
+
+
+.display img{
+    aspect-ratio: 5/5;
+
+}
+
+.user{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: all 1s ease;
+}
+.user img{
+    width: 300px;
+}
+.user a{
+    font-size: 50px;
+    text-decoration: none;
+    color: black;
+}
+
+.computer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: all 1s ease;
+}
+
+.computer img{
+    width: 300px;
+}
+
+.computer a{
+    font-size: 50px;
+    text-decoration: none;
+    color: black;
+}
+
+.winner{
+    height: 20vh;
+}
+
+.winner h1{
+    color: red;
+    font-size: 50px;
+    text-align: center;
+    transition: all .5s ease;
+}
